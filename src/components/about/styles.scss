@@ -1,0 +1,34 @@
+.aboutWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  height: calc(100vh - 56px);
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    height: 100%;
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+
+      h2 {
+        font-size: 5.5vmax;
+        font-weight: 500;
+      }
+      .intro {
+        font-size: 1.8vh;
+        max-width: 600px;
+      }
+    }
+    &__skills {
+      text-align: left;
+    }
+  }
+}

@@ -1,3 +1,16 @@
+:root {
+  --text-color: rgb(47, 47, 47);
+}
+
+* {
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 400;
+}
+
 .App {
   text-align: center;
 }
