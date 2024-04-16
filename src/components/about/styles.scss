@@ -4,13 +4,15 @@
   align-items: center;
   width: 80%;
   margin: auto;
-  height: calc(100vh - 56px);
+  height: 100vh;
+  margin-top: 56px;
 
   .about {
     display: flex;
     flex-direction: column;
     gap: 72px;
     height: 100%;
+    margin-top: 64px;
 
     &__description {
       display: flex;
@@ -26,6 +28,11 @@
         font-size: 1.8vh;
         max-width: 600px;
       }
+    }
+    .aboutTxt {
+      font-size: 2vh;
+      line-height: 1.5;
+      font-weight: 200;
     }
     &__skills {
       text-align: left;

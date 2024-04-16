@@ -9,6 +9,7 @@
   box-sizing: border-box;
   font-family: "Fahkwang", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 .App {

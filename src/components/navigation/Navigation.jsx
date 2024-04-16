@@ -1,65 +1,74 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 
 const Navigation = () => {
-    const items = [
-        {
-            label: "Home",
-            path: "#home",
-            // command: () => {
-            //     window.location.href = "/";
-            // },
-        },
-        {
-            label: "About",
-            path: "#about",
-            // command: () => {
-            //     window.location.href = "/about";
-            // },
-        },
-        {
-            label: "Work",
-            path: "#work",
-            // command: () => {
-            //     window.location.href = "/about";
-            // },
-        },
-        {
-            label: "Contact",
-            path: "#contact",
-            // command: () => {
-            //     window.location.href = "/about";
-            // },
-        },
-    ];
+  const [currentHash, setCurrentHash] = useState(window.location.hash);
 
-    const handleScroll = (id) => {
-        const anchor = document.querySelector(id);
-        if (anchor) {
-            anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
     };
 
-    return (
-        <>
-            <div>
-                <nav>
-                    <ul className="linkWrapper">
-                        {items.map((item, index) => (
-                            <li
-                                key={index}
-                                className="link"
-                                onClick={() => handleScroll(item.path)}
-                            >
-                                {item.label}
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            </div>
-        </>
-    );
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+  const items = [
+    {
+      label: "Home",
+      path: "#home",
+      // command: () => {
+      //     window.location.href = "/";
+      // },
+    },
+    {
+      label: "About",
+      path: "#about",
+      // command: () => {
+      //     window.location.href = "/about";
+      // },
+    },
+    {
+      label: "Work",
+      path: "#work",
+      // command: () => {
+      //     window.location.href = "/about";
+      // },
+    },
+    {
+      label: "Contact",
+      path: "#contact",
+      // command: () => {
+      //     window.location.href = "/about";
+      // },
+    },
+  ];
+
+  return (
+    <>
+      <div>
+        <nav>
+          <ul className="linkWrapper">
+            {items.map((item, index) => (
+              <li
+                key={index}
+                className={`link ${currentHash === item.path ? "active" : ""}`}
+              >
+                <a href={item.path} className="link">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
+  );
 };
 
 export default Navigation;

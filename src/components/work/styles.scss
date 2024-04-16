@@ -1,0 +1,90 @@
+.workWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  margin-top: 56px;
+
+  .work {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    height: 100%;
+    margin-top: 64px;
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+
+      h2 {
+        font-size: 5.5vmax;
+        font-weight: 500;
+      }
+      .intro {
+        font-size: 1.8vh;
+        max-width: 600px;
+      }
+    }
+    .workTxt {
+      font-size: 2vh;
+      line-height: 1.5;
+      font-weight: 200;
+    }
+    &__skills {
+      text-align: left;
+    }
+  }
+}
+
+.workItemWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  h2 {
+    width: 100%;
+    text-align: left;
+  }
+  .workItem {
+    .card {
+      background: #424242; // or any color you prefer
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%; // or a fixed width depending on your design
+      max-width: 250px;
+      min-height: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // for a subtle shadow effect
+      margin-bottom: 20px; // space between cards
+
+      .card-title {
+        color: #fff; // assuming a light text on dark background
+        margin-bottom: 15px;
+      }
+
+      .card-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        // Assuming the Chip component renders its .item children directly
+        .item {
+          background: #757575; // chip background color
+          color: #fff; // chip text color
+          border-radius: 50px; // rounded chips
+          padding: 5px 15px;
+          font-size: 0.8em; // smaller font size for the chips
+        }
+      }
+
+      .card-description {
+        color: #aaa; // lighter text for the description
+        font-size: 0.9em;
+      }
+    }
+  }
+}

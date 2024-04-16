@@ -1,0 +1,84 @@
+.contactWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  margin-top: 56px;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    height: 100%;
+    margin-top: 64px;
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+
+      h2 {
+        font-size: 5.5vmax;
+        font-weight: 500;
+      }
+      .intro {
+        font-size: 1.8vh;
+        max-width: 600px;
+      }
+    }
+    .contactTxt {
+      font-size: 2vh;
+      line-height: 1.5;
+      font-weight: 200;
+    }
+    &__skills {
+      text-align: left;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; // Center align the icons
+  margin-top: 20px; // Space above the social links
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; // Width of the circle
+    height: 60px; // Height of the circle
+    margin: 0 10px; // Space between icons
+    border-radius: 50%; // Make it circular
+    background-color: #d3d3d3; // Background color of the circle
+    color: #fff; // Color of the icon
+    transition: transform 0.3s; // Add a smooth hover effect
+
+    &:hover {
+      transform: translatey(-10px);
+    }
+
+    .social-icon {
+      width: 40px; // Icon size
+      height: 40px; // Icon size
+
+      svg {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
