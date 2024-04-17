@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./styles.scss";
 
 const Navigation = () => {
@@ -22,30 +21,18 @@ const Navigation = () => {
     {
       label: "Home",
       path: "#home",
-      // command: () => {
-      //     window.location.href = "/";
-      // },
     },
     {
       label: "About",
       path: "#about",
-      // command: () => {
-      //     window.location.href = "/about";
-      // },
     },
     {
       label: "Work",
       path: "#work",
-      // command: () => {
-      //     window.location.href = "/about";
-      // },
     },
     {
       label: "Contact",
       path: "#contact",
-      // command: () => {
-      //     window.location.href = "/about";
-      // },
     },
   ];
 
