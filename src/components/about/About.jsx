@@ -4,12 +4,13 @@ import Chip from "../chip/Chip";
 
 const About = () => {
   const aboutTxt =
-    "I am a software developer with a focus on frontend development and data analysis/engineering. I have experience in developing web platforms using React and Vue. I am passionate about puzzles, technology and learning new things.";
+    "I am a fullstack software developer with a focus on frontend-, backend development and data analysis/engineering. I have experience in developing web platforms using React and Vue, APIs using Golang and creating data pipelines with Python. I am passionate about puzzles, technology and learning new things.";
   const skills = [
     "React",
     "Vue",
     "JavaScript",
     "TypeScript",
+    "Golang",
     "HTML",
     "CSS",
     "SASS",

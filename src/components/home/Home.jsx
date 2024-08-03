@@ -12,13 +12,13 @@ const Home = () => {
       <div className="homeWrapper" id="home">
         <section className="home">
           <div className="home__description">
-            <span>Hi, my name is</span>
+            <span className="introToName">Hi, my name is</span>
             <div className="name">
               <h2>Carsten Höschele</h2>
             </div>
             <p className="intro">
-              Software developer specialized in Frontend and Data
-              Analysis/Engineering.
+              I'm a Fullstack Software Developer with a passion for Frontend and
+              Data Analysis.
             </p>
           </div>
         </section>
